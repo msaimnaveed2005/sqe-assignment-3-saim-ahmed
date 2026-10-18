@@ -1,0 +1,363 @@
+=== Source import ===
+Command: python -c import validators; print(validators.__version__); print(validators.__file__)
+0.35.0
+C:\Users\SHARJAH LAPTOPS\Documents\Codex\2026-10-18\an\outputs\validators_assignment\src\validators\__init__.py
+
+
+Exit: 0
+
+=== Dependency compatibility ===
+Command: python -m pip check
+No broken requirements found.
+
+
+Exit: 0
+
+=== Sequential and coverage ===
+Command: python -m coverage run --rcfile=assignment/.coveragerc -m pytest -c pytest-assignment.ini -v --junitxml=assignment/reports/sequential.xml
+============================= test session starts =============================
+platform win32 -- Python 3.12.14, pytest-8.3.5, pluggy-1.7.0 -- C:\Users\SHARJAH LAPTOPS\Documents\Codex\2026-10-18\an\work\assignment_env\Scripts\python.exe
+rootdir: C:\Users\SHARJAH LAPTOPS\Documents\Codex\2026-10-18\an\outputs\validators_assignment
+configfile: pytest-assignment.ini
+testpaths: assignment/tests
+plugins: order-1.3.0, xdist-3.6.1
+collecting ... collected 60 items
+
+assignment/tests/test_length.py::test_length[SAIM-LEN-01] PASSED         [  1%]
+assignment/tests/test_length.py::test_length[SAIM-LEN-02] PASSED         [  3%]
+assignment/tests/test_length.py::test_length[SAIM-LEN-03] PASSED         [  5%]
+assignment/tests/test_length.py::test_length[SAIM-LEN-04] PASSED         [  6%]
+assignment/tests/test_length.py::test_length[SAIM-LEN-05] PASSED         [  8%]
+assignment/tests/test_length.py::test_length[SAIM-LEN-06] PASSED         [ 10%]
+assignment/tests/test_length.py::test_length[SAIM-LEN-07] PASSED         [ 11%]
+assignment/tests/test_length.py::test_length[SAIM-LEN-08] PASSED         [ 13%]
+assignment/tests/test_length.py::test_length[SAIM-LEN-09] PASSED         [ 15%]
+assignment/tests/test_length.py::test_length[SAIM-LEN-10] PASSED         [ 16%]
+assignment/tests/test_length.py::test_length[AHMED-LEN-01] PASSED        [ 18%]
+assignment/tests/test_length.py::test_length[AHMED-LEN-02] PASSED        [ 20%]
+assignment/tests/test_length.py::test_length[AHMED-LEN-03] PASSED        [ 21%]
+assignment/tests/test_length.py::test_length[AHMED-LEN-04] PASSED        [ 23%]
+assignment/tests/test_length.py::test_length[AHMED-LEN-05] PASSED        [ 25%]
+assignment/tests/test_length.py::test_length[AHMED-LEN-06] PASSED        [ 26%]
+assignment/tests/test_length.py::test_length[AHMED-LEN-07] PASSED        [ 28%]
+assignment/tests/test_length.py::test_length[AHMED-LEN-08] PASSED        [ 30%]
+assignment/tests/test_length.py::test_length[AHMED-LEN-09] PASSED        [ 31%]
+assignment/tests/test_length.py::test_length[AHMED-LEN-10] PASSED        [ 33%]
+assignment/tests/test_between.py::test_between[SAIM-RNG-01] PASSED       [ 35%]
+assignment/tests/test_between.py::test_between[SAIM-RNG-02] PASSED       [ 36%]
+assignment/tests/test_between.py::test_between[SAIM-RNG-03] PASSED       [ 38%]
+assignment/tests/test_between.py::test_between[SAIM-RNG-04] PASSED       [ 40%]
+assignment/tests/test_between.py::test_between[SAIM-RNG-05] PASSED       [ 41%]
+assignment/tests/test_between.py::test_between[SAIM-RNG-06] PASSED       [ 43%]
+assignment/tests/test_between.py::test_between[SAIM-RNG-07] PASSED       [ 45%]
+assignment/tests/test_between.py::test_between[SAIM-RNG-08] PASSED       [ 46%]
+assignment/tests/test_between.py::test_between[SAIM-RNG-09] PASSED       [ 48%]
+assignment/tests/test_between.py::test_between[SAIM-RNG-10] PASSED       [ 50%]
+assignment/tests/test_between.py::test_between[AHMED-RNG-01] PASSED      [ 51%]
+assignment/tests/test_between.py::test_between[AHMED-RNG-02] PASSED      [ 53%]
+assignment/tests/test_between.py::test_between[AHMED-RNG-03] PASSED      [ 55%]
+assignment/tests/test_between.py::test_between[AHMED-RNG-04] PASSED      [ 56%]
+assignment/tests/test_between.py::test_between[AHMED-RNG-05] PASSED      [ 58%]
+assignment/tests/test_between.py::test_between[AHMED-RNG-06] PASSED      [ 60%]
+assignment/tests/test_between.py::test_between[AHMED-RNG-07] PASSED      [ 61%]
+assignment/tests/test_between.py::test_between[AHMED-RNG-08] PASSED      [ 63%]
+assignment/tests/test_between.py::test_between[AHMED-RNG-09] PASSED      [ 65%]
+assignment/tests/test_between.py::test_between[AHMED-RNG-10] PASSED      [ 66%]
+assignment/tests/test_mac.py::test_mac_address[SAIM-MAC-01] PASSED       [ 68%]
+assignment/tests/test_mac.py::test_mac_address[SAIM-MAC-02] PASSED       [ 70%]
+assignment/tests/test_mac.py::test_mac_address[SAIM-MAC-03] PASSED       [ 71%]
+assignment/tests/test_mac.py::test_mac_address[SAIM-MAC-04] PASSED       [ 73%]
+assignment/tests/test_mac.py::test_mac_address[SAIM-MAC-05] PASSED       [ 75%]
+assignment/tests/test_mac.py::test_mac_address[SAIM-MAC-06] PASSED       [ 76%]
+assignment/tests/test_mac.py::test_mac_address[SAIM-MAC-07] PASSED       [ 78%]
+assignment/tests/test_mac.py::test_mac_address[SAIM-MAC-08] PASSED       [ 80%]
+assignment/tests/test_mac.py::test_mac_address[SAIM-MAC-09] PASSED       [ 81%]
+assignment/tests/test_mac.py::test_mac_address[SAIM-MAC-10] PASSED       [ 83%]
+assignment/tests/test_mac.py::test_mac_address[AHMED-MAC-01] PASSED      [ 85%]
+assignment/tests/test_mac.py::test_mac_address[AHMED-MAC-02] PASSED      [ 86%]
+assignment/tests/test_mac.py::test_mac_address[AHMED-MAC-03] PASSED      [ 88%]
+assignment/tests/test_mac.py::test_mac_address[AHMED-MAC-04] PASSED      [ 90%]
+assignment/tests/test_mac.py::test_mac_address[AHMED-MAC-05] PASSED      [ 91%]
+assignment/tests/test_mac.py::test_mac_address[AHMED-MAC-06] PASSED      [ 93%]
+assignment/tests/test_mac.py::test_mac_address[AHMED-MAC-07] PASSED      [ 95%]
+assignment/tests/test_mac.py::test_mac_address[AHMED-MAC-08] PASSED      [ 96%]
+assignment/tests/test_mac.py::test_mac_address[AHMED-MAC-09] PASSED      [ 98%]
+assignment/tests/test_mac.py::test_mac_address[AHMED-MAC-10] PASSED      [100%]
+
+- generated xml file: C:\Users\SHARJAH LAPTOPS\Documents\Codex\2026-10-18\an\outputs\validators_assignment\assignment\reports\sequential.xml -
+============================= 60 passed in 0.89s ==============================
+
+
+Exit: 0
+
+=== Parallel ===
+Command: python -m pytest -c pytest-assignment.ini -n 2 --basetemp=C:\Users\SHARJAH LAPTOPS\Documents\Codex\2026-10-18\an\work\assignment-verification-temp\parallel -q --junitxml=assignment/reports/parallel.xml
+bringing up nodes...
+bringing up nodes...
+
+............................................................             [100%]
+- generated xml file: C:\Users\SHARJAH LAPTOPS\Documents\Codex\2026-10-18\an\outputs\validators_assignment\assignment\reports\parallel.xml -
+60 passed in 4.43s
+
+
+Exit: 0
+
+=== Saim suite ===
+Command: python -m pytest -c pytest-assignment.ini -m saim -q
+..............................                                           [100%]
+30 passed, 30 deselected in 0.15s
+
+
+Exit: 0
+
+=== Ahmed suite ===
+Command: python -m pytest -c pytest-assignment.ini -m ahmed -q
+..............................                                           [100%]
+30 passed, 30 deselected in 0.27s
+
+
+Exit: 0
+
+=== Smoke suite ===
+Command: python -m pytest -c pytest-assignment.ini -m smoke -q
+............                                                             [100%]
+12 passed, 48 deselected in 0.17s
+
+
+Exit: 0
+
+=== Boundary suite ===
+Command: python -m pytest -c pytest-assignment.ini -m boundary -q
+.............................                                            [100%]
+29 passed, 31 deselected in 0.19s
+
+
+Exit: 0
+
+=== ECP suite ===
+Command: python -m pytest -c pytest-assignment.ini -m ecp -q
+...............................                                          [100%]
+31 passed, 29 deselected in 0.80s
+
+
+Exit: 0
+
+=== Ordered parallel groups ===
+Command: python assignment/run_suites.py --parallel
+
+Running group: length
+============================= test session starts =============================
+platform win32 -- Python 3.12.14, pytest-8.3.5, pluggy-1.7.0 -- C:\Users\SHARJAH LAPTOPS\Documents\Codex\2026-10-18\an\work\assignment_env\Scripts\python.exe
+rootdir: C:\Users\SHARJAH LAPTOPS\Documents\Codex\2026-10-18\an\outputs\validators_assignment
+configfile: pytest-assignment.ini
+testpaths: assignment/tests
+plugins: order-1.3.0, xdist-3.6.1
+created: 2/2 workers
+2 workers [20 items]
+
+scheduling tests via LoadScheduling
+
+assignment/tests/test_length.py::test_length[SAIM-LEN-03] 
+assignment/tests/test_length.py::test_length[SAIM-LEN-01] 
+[gw0] [  5%] PASSED assignment/tests/test_length.py::test_length[SAIM-LEN-01] 
+[gw1] [ 10%] PASSED assignment/tests/test_length.py::test_length[SAIM-LEN-03] 
+assignment/tests/test_length.py::test_length[SAIM-LEN-02] 
+assignment/tests/test_length.py::test_length[SAIM-LEN-04] 
+[gw0] [ 15%] PASSED assignment/tests/test_length.py::test_length[SAIM-LEN-02] 
+[gw1] [ 20%] PASSED assignment/tests/test_length.py::test_length[SAIM-LEN-04] 
+assignment/tests/test_length.py::test_length[SAIM-LEN-05] 
+assignment/tests/test_length.py::test_length[SAIM-LEN-08] 
+[gw1] [ 25%] PASSED assignment/tests/test_length.py::test_length[SAIM-LEN-08] 
+[gw0] [ 30%] PASSED assignment/tests/test_length.py::test_length[SAIM-LEN-05] 
+assignment/tests/test_length.py::test_length[SAIM-LEN-06] 
+[gw0] [ 35%] PASSED assignment/tests/test_length.py::test_length[SAIM-LEN-06] 
+assignment/tests/test_length.py::test_length[SAIM-LEN-07] 
+assignment/tests/test_length.py::test_length[SAIM-LEN-09] 
+[gw0] [ 40%] PASSED assignment/tests/test_length.py::test_length[SAIM-LEN-07] 
+[gw1] [ 45%] PASSED assignment/tests/test_length.py::test_length[SAIM-LEN-09] 
+assignment/tests/test_length.py::test_length[SAIM-LEN-10] 
+assignment/tests/test_length.py::test_length[AHMED-LEN-01] 
+[gw1] [ 50%] PASSED assignment/tests/test_length.py::test_length[AHMED-LEN-01] 
+[gw0] [ 55%] PASSED assignment/tests/test_length.py::test_length[SAIM-LEN-10] 
+assignment/tests/test_length.py::test_length[AHMED-LEN-03] 
+[gw1] [ 60%] PASSED assignment/tests/test_length.py::test_length[AHMED-LEN-03] 
+assignment/tests/test_length.py::test_length[AHMED-LEN-02] 
+assignment/tests/test_length.py::test_length[AHMED-LEN-04] 
+[gw0] [ 65%] PASSED assignment/tests/test_length.py::test_length[AHMED-LEN-02] 
+[gw1] [ 70%] PASSED assignment/tests/test_length.py::test_length[AHMED-LEN-04] 
+assignment/tests/test_length.py::test_length[AHMED-LEN-05] 
+assignment/tests/test_length.py::test_length[AHMED-LEN-06] 
+[gw0] [ 75%] PASSED assignment/tests/test_length.py::test_length[AHMED-LEN-05] 
+[gw1] [ 80%] PASSED assignment/tests/test_length.py::test_length[AHMED-LEN-06] 
+assignment/tests/test_length.py::test_length[AHMED-LEN-07] 
+assignment/tests/test_length.py::test_length[AHMED-LEN-08] 
+[gw0] [ 85%] PASSED assignment/tests/test_length.py::test_length[AHMED-LEN-07] 
+assignment/tests/test_length.py::test_length[AHMED-LEN-10] 
+[gw0] [ 90%] PASSED assignment/tests/test_length.py::test_length[AHMED-LEN-10] 
+[gw1] [ 95%] PASSED assignment/tests/test_length.py::test_length[AHMED-LEN-08] 
+assignment/tests/test_length.py::test_length[AHMED-LEN-09] 
+[gw1] [100%] PASSED assignment/tests/test_length.py::test_length[AHMED-LEN-09] 
+
+============================= 20 passed in 5.75s ==============================
+
+Running group: between
+============================= test session starts =============================
+platform win32 -- Python 3.12.14, pytest-8.3.5, pluggy-1.7.0 -- C:\Users\SHARJAH LAPTOPS\Documents\Codex\2026-10-18\an\work\assignment_env\Scripts\python.exe
+rootdir: C:\Users\SHARJAH LAPTOPS\Documents\Codex\2026-10-18\an\outputs\validators_assignment
+configfile: pytest-assignment.ini
+testpaths: assignment/tests
+plugins: order-1.3.0, xdist-3.6.1
+created: 2/2 workers
+2 workers [20 items]
+
+scheduling tests via LoadScheduling
+
+assignment/tests/test_between.py::test_between[SAIM-RNG-01] 
+assignment/tests/test_between.py::test_between[SAIM-RNG-03] 
+[gw0] [  5%] PASSED assignment/tests/test_between.py::test_between[SAIM-RNG-01] 
+assignment/tests/test_between.py::test_between[SAIM-RNG-02] 
+[gw1] [ 10%] PASSED assignment/tests/test_between.py::test_between[SAIM-RNG-03] 
+[gw0] [ 15%] PASSED assignment/tests/test_between.py::test_between[SAIM-RNG-02] 
+assignment/tests/test_between.py::test_between[SAIM-RNG-05] 
+assignment/tests/test_between.py::test_between[SAIM-RNG-04] 
+[gw0] [ 20%] PASSED assignment/tests/test_between.py::test_between[SAIM-RNG-05] 
+[gw1] [ 25%] PASSED assignment/tests/test_between.py::test_between[SAIM-RNG-04] 
+assignment/tests/test_between.py::test_between[SAIM-RNG-06] 
+assignment/tests/test_between.py::test_between[SAIM-RNG-08] 
+[gw0] [ 30%] PASSED assignment/tests/test_between.py::test_between[SAIM-RNG-06] 
+[gw1] [ 35%] PASSED assignment/tests/test_between.py::test_between[SAIM-RNG-08] 
+assignment/tests/test_between.py::test_between[SAIM-RNG-07] 
+assignment/tests/test_between.py::test_between[SAIM-RNG-09] 
+[gw0] [ 40%] PASSED assignment/tests/test_between.py::test_between[SAIM-RNG-07] 
+[gw1] [ 45%] PASSED assignment/tests/test_between.py::test_between[SAIM-RNG-09] 
+assignment/tests/test_between.py::test_between[AHMED-RNG-01] 
+assignment/tests/test_between.py::test_between[SAIM-RNG-10] 
+[gw1] [ 50%] PASSED assignment/tests/test_between.py::test_between[AHMED-RNG-01] 
+[gw0] [ 55%] PASSED assignment/tests/test_between.py::test_between[SAIM-RNG-10] 
+assignment/tests/test_between.py::test_between[AHMED-RNG-02] 
+assignment/tests/test_between.py::test_between[AHMED-RNG-03] 
+[gw1] [ 60%] PASSED assignment/tests/test_between.py::test_between[AHMED-RNG-02] 
+[gw0] [ 65%] PASSED assignment/tests/test_between.py::test_between[AHMED-RNG-03] 
+assignment/tests/test_between.py::test_between[AHMED-RNG-05] 
+assignment/tests/test_between.py::test_between[AHMED-RNG-04] 
+[gw0] [ 70%] PASSED assignment/tests/test_between.py::test_between[AHMED-RNG-05] 
+assignment/tests/test_between.py::test_between[AHMED-RNG-06] 
+[gw1] [ 75%] PASSED assignment/tests/test_between.py::test_between[AHMED-RNG-04] 
+[gw0] [ 80%] PASSED assignment/tests/test_between.py::test_between[AHMED-RNG-06] 
+assignment/tests/test_between.py::test_between[AHMED-RNG-07] 
+assignment/tests/test_between.py::test_between[AHMED-RNG-08] 
+[gw0] [ 85%] PASSED assignment/tests/test_between.py::test_between[AHMED-RNG-08] 
+[gw1] [ 90%] PASSED assignment/tests/test_between.py::test_between[AHMED-RNG-07] 
+assignment/tests/test_between.py::test_between[AHMED-RNG-10] 
+assignment/tests/test_between.py::test_between[AHMED-RNG-09] 
+[gw0] [ 95%] PASSED assignment/tests/test_between.py::test_between[AHMED-RNG-10] 
+[gw1] [100%] PASSED assignment/tests/test_between.py::test_between[AHMED-RNG-09] 
+
+============================= 20 passed in 3.15s ==============================
+
+Running group: mac
+============================= test session starts =============================
+platform win32 -- Python 3.12.14, pytest-8.3.5, pluggy-1.7.0 -- C:\Users\SHARJAH LAPTOPS\Documents\Codex\2026-10-18\an\work\assignment_env\Scripts\python.exe
+rootdir: C:\Users\SHARJAH LAPTOPS\Documents\Codex\2026-10-18\an\outputs\validators_assignment
+configfile: pytest-assignment.ini
+testpaths: assignment/tests
+plugins: order-1.3.0, xdist-3.6.1
+created: 2/2 workers
+2 workers [20 items]
+
+scheduling tests via LoadScheduling
+
+assignment/tests/test_mac.py::test_mac_address[SAIM-MAC-03] 
+assignment/tests/test_mac.py::test_mac_address[SAIM-MAC-01] 
+[gw0] [  5%] PASSED assignment/tests/test_mac.py::test_mac_address[SAIM-MAC-01] 
+[gw1] [ 10%] PASSED assignment/tests/test_mac.py::test_mac_address[SAIM-MAC-03] 
+assignment/tests/test_mac.py::test_mac_address[SAIM-MAC-02] 
+assignment/tests/test_mac.py::test_mac_address[SAIM-MAC-04] 
+[gw1] [ 15%] PASSED assignment/tests/test_mac.py::test_mac_address[SAIM-MAC-04] 
+[gw0] [ 20%] PASSED assignment/tests/test_mac.py::test_mac_address[SAIM-MAC-02] 
+assignment/tests/test_mac.py::test_mac_address[SAIM-MAC-08] 
+assignment/tests/test_mac.py::test_mac_address[SAIM-MAC-05] 
+[gw1] [ 25%] PASSED assignment/tests/test_mac.py::test_mac_address[SAIM-MAC-08] 
+[gw0] [ 30%] PASSED assignment/tests/test_mac.py::test_mac_address[SAIM-MAC-05] 
+assignment/tests/test_mac.py::test_mac_address[SAIM-MAC-06] 
+assignment/tests/test_mac.py::test_mac_address[SAIM-MAC-09] 
+[gw0] [ 35%] PASSED assignment/tests/test_mac.py::test_mac_address[SAIM-MAC-06] 
+assignment/tests/test_mac.py::test_mac_address[SAIM-MAC-07] 
+[gw0] [ 40%] PASSED assignment/tests/test_mac.py::test_mac_address[SAIM-MAC-07] 
+assignment/tests/test_mac.py::test_mac_address[AHMED-MAC-01] 
+[gw0] [ 45%] PASSED assignment/tests/test_mac.py::test_mac_address[AHMED-MAC-01] 
+[gw1] [ 50%] PASSED assignment/tests/test_mac.py::test_mac_address[SAIM-MAC-09] 
+assignment/tests/test_mac.py::test_mac_address[SAIM-MAC-10] 
+[gw1] [ 55%] PASSED assignment/tests/test_mac.py::test_mac_address[SAIM-MAC-10] 
+assignment/tests/test_mac.py::test_mac_address[AHMED-MAC-04] 
+[gw1] [ 60%] PASSED assignment/tests/test_mac.py::test_mac_address[AHMED-MAC-04] 
+assignment/tests/test_mac.py::test_mac_address[AHMED-MAC-05] 
+[gw1] [ 65%] PASSED assignment/tests/test_mac.py::test_mac_address[AHMED-MAC-05] 
+assignment/tests/test_mac.py::test_mac_address[AHMED-MAC-06] 
+[gw1] [ 70%] PASSED assignment/tests/test_mac.py::test_mac_address[AHMED-MAC-06] 
+assignment/tests/test_mac.py::test_mac_address[AHMED-MAC-07] 
+[gw1] [ 75%] PASSED assignment/tests/test_mac.py::test_mac_address[AHMED-MAC-07] 
+assignment/tests/test_mac.py::test_mac_address[AHMED-MAC-08] 
+assignment/tests/test_mac.py::test_mac_address[AHMED-MAC-02] 
+[gw0] [ 80%] PASSED assignment/tests/test_mac.py::test_mac_address[AHMED-MAC-02] 
+[gw1] [ 85%] PASSED assignment/tests/test_mac.py::test_mac_address[AHMED-MAC-08] 
+assignment/tests/test_mac.py::test_mac_address[AHMED-MAC-03] 
+[gw0] [ 90%] PASSED assignment/tests/test_mac.py::test_mac_address[AHMED-MAC-03] 
+assignment/tests/test_mac.py::test_mac_address[AHMED-MAC-10] 
+[gw0] [ 95%] PASSED assignment/tests/test_mac.py::test_mac_address[AHMED-MAC-10] 
+assignment/tests/test_mac.py::test_mac_address[AHMED-MAC-09] 
+[gw1] [100%] PASSED assignment/tests/test_mac.py::test_mac_address[AHMED-MAC-09] 
+
+============================= 20 passed in 4.36s ==============================
+
+
+Exit: 0
+
+=== Original upstream selected-module tests ===
+Command: python -m pytest tests/test_length.py tests/test_between.py tests/test_mac_address.py -q
+..............................                                           [100%]
+30 passed in 0.40s
+
+
+Exit: 0
+
+=== Coverage text ===
+Command: python -m coverage report --rcfile=assignment/.coveragerc
+Name                            Stmts   Miss Branch BrPart    Cover   Missing
+-----------------------------------------------------------------------------
+src\validators\between.py          19      0     10      0  100.00%
+src\validators\length.py           10      0      6      0  100.00%
+src\validators\mac_address.py       5      0      2      0  100.00%
+-----------------------------------------------------------------------------
+TOTAL                              34      0     18      0  100.00%
+
+
+Exit: 0
+
+=== Coverage HTML ===
+Command: python -m coverage html --rcfile=assignment/.coveragerc
+Wrote HTML report to assignment/reports/coverage_html\index.html
+
+
+Exit: 0
+
+=== Coverage XML ===
+Command: python -m coverage xml --rcfile=assignment/.coveragerc
+Wrote XML report to assignment/reports/coverage.xml
+
+
+Exit: 0
+
+=== Coverage JSON ===
+Command: python -m coverage json --rcfile=assignment/.coveragerc -o assignment/reports/coverage.json
+Wrote JSON report to assignment/reports/coverage.json
+
+
+Exit: 0
+
+=== Result CSV export ===
+Command: python assignment/scripts/export_results.py
+Exported 60 cases to C:\Users\SHARJAH LAPTOPS\Documents\Codex\2026-10-18\an\outputs\validators_assignment\assignment\reports\test_results.csv
+
+
+Exit: 0

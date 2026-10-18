@@ -1,0 +1,18 @@
+[run]
+branch = True
+source = src/validators
+data_file = assignment/reports/.coverage
+
+[report]
+include =
+    */validators/between.py
+    */validators/length.py
+    */validators/mac_address.py
+show_missing = True
+precision = 2
+
+[html]
+directory = assignment/reports/coverage_html
+
+[xml]
+output = assignment/reports/coverage.xml

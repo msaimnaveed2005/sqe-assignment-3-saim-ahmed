@@ -1,0 +1,61 @@
+id,owner,module,input_json,kwargs_json,expected,technique,objective,order,smoke
+SAIM-LEN-01,Saim,length,"""aa""","{""min_val"": 3, ""max_val"": 8}",ValidationError,BVA,Length 2: just below minimum 3,1,yes
+SAIM-LEN-02,Saim,length,"""aaa""","{""min_val"": 3, ""max_val"": 8}",True,BVA,Length 3: at minimum,2,yes
+SAIM-LEN-03,Saim,length,"""aaaa""","{""min_val"": 3, ""max_val"": 8}",True,BVA,Length 4: just above minimum,3,no
+SAIM-LEN-04,Saim,length,"""aaaaaaa""","{""min_val"": 3, ""max_val"": 8}",True,BVA,Length 7: just below maximum,4,no
+SAIM-LEN-05,Saim,length,"""aaaaaaaa""","{""min_val"": 3, ""max_val"": 8}",True,BVA,Length 8: at maximum,5,no
+SAIM-LEN-06,Saim,length,"""aaaaaaaaa""","{""min_val"": 3, ""max_val"": 8}",ValidationError,BVA,Length 9: just above maximum 8,6,no
+SAIM-LEN-07,Saim,length,"""""","{""min_val"": 3, ""max_val"": 8}",ValidationError,ECP,Empty string with positive minimum,7,no
+SAIM-LEN-08,Saim,length,"""router""","{""min_val"": 3, ""max_val"": 8}",True,ECP,Typical valid nonempty string,8,no
+SAIM-LEN-09,Saim,length,"""abcdefghi""","{""min_val"": 3}",True,ECP,Minimum only: no upper length limit,9,no
+SAIM-LEN-10,Saim,length,"""ab""","{""max_val"": 3}",True,ECP,Maximum only: short nonempty string,10,no
+AHMED-LEN-01,Ahmed,length,"""""","{""min_val"": 1, ""max_val"": 5}",ValidationError,BVA,Length 0: just below minimum 1,11,yes
+AHMED-LEN-02,Ahmed,length,"""b""","{""min_val"": 1, ""max_val"": 5}",True,BVA,Length 1: at minimum,12,yes
+AHMED-LEN-03,Ahmed,length,"""bb""","{""min_val"": 1, ""max_val"": 5}",True,BVA,Length 2: just above minimum,13,no
+AHMED-LEN-04,Ahmed,length,"""bbbb""","{""min_val"": 1, ""max_val"": 5}",True,BVA,Length 4: just below maximum,14,no
+AHMED-LEN-05,Ahmed,length,"""bbbbb""","{""min_val"": 1, ""max_val"": 5}",True,BVA,Length 5: at maximum,15,no
+AHMED-LEN-06,Ahmed,length,"""bbbbbb""","{""min_val"": 1, ""max_val"": 5}",ValidationError,BVA,Length 6: just above maximum 5,16,no
+AHMED-LEN-07,Ahmed,length,"""café""","{""min_val"": 4, ""max_val"": 4}",True,ECP,Unicode string: four Python characters,17,no
+AHMED-LEN-08,Ahmed,length,"""abc""","{""min_val"": -1, ""max_val"": 8}",ValidationError,ECP,Invalid configuration: negative minimum,18,no
+AHMED-LEN-09,Ahmed,length,"""abc""","{""min_val"": 0, ""max_val"": -1}",ValidationError,ECP,Invalid configuration: negative maximum,19,no
+AHMED-LEN-10,Ahmed,length,"""""","{""min_val"": 0, ""max_val"": 0}",True,BVA,Zero-length interval accepts empty string,20,no
+SAIM-RNG-01,Saim,between,0,"{""min_val"": 1, ""max_val"": 65535}",ValidationError,BVA,0: just below minimum 1,21,yes
+SAIM-RNG-02,Saim,between,1,"{""min_val"": 1, ""max_val"": 65535}",True,BVA,1: at minimum,22,yes
+SAIM-RNG-03,Saim,between,2,"{""min_val"": 1, ""max_val"": 65535}",True,BVA,2: just above minimum,23,no
+SAIM-RNG-04,Saim,between,65534,"{""min_val"": 1, ""max_val"": 65535}",True,BVA,65534: just below maximum,24,no
+SAIM-RNG-05,Saim,between,65535,"{""min_val"": 1, ""max_val"": 65535}",True,BVA,65535: at maximum,25,no
+SAIM-RNG-06,Saim,between,65536,"{""min_val"": 1, ""max_val"": 65535}",ValidationError,BVA,65536: just above maximum,26,no
+SAIM-RNG-07,Saim,between,null,"{""min_val"": 1, ""max_val"": 65535}",ValidationError,ECP,Missing value partition,27,no
+SAIM-RNG-08,Saim,between,443,"{""min_val"": 1, ""max_val"": 65535}",True,ECP,Typical valid integer inside the interval,28,no
+SAIM-RNG-09,Saim,between,10,"{""min_val"": 1}",True,ECP,Lower bound only,29,no
+SAIM-RNG-10,Saim,between,10,"{""max_val"": 100}",True,ECP,Upper bound only,30,no
+AHMED-RNG-01,Ahmed,between,-6,"{""min_val"": -5, ""max_val"": 5}",ValidationError,BVA,-6: just below minimum -5,31,yes
+AHMED-RNG-02,Ahmed,between,-5,"{""min_val"": -5, ""max_val"": 5}",True,BVA,-5: at minimum,32,yes
+AHMED-RNG-03,Ahmed,between,-4,"{""min_val"": -5, ""max_val"": 5}",True,BVA,-4: just above minimum,33,no
+AHMED-RNG-04,Ahmed,between,4,"{""min_val"": -5, ""max_val"": 5}",True,BVA,4: just below maximum,34,no
+AHMED-RNG-05,Ahmed,between,5,"{""min_val"": -5, ""max_val"": 5}",True,BVA,5: at maximum,35,no
+AHMED-RNG-06,Ahmed,between,6,"{""min_val"": -5, ""max_val"": 5}",ValidationError,BVA,6: just above maximum 5,36,no
+AHMED-RNG-07,Ahmed,between,0.5,"{""min_val"": 0.0, ""max_val"": 1.0}",True,ECP,Comparable floating-point values,37,no
+AHMED-RNG-08,Ahmed,between,3,"{""min_val"": 1, ""max_val"": ""z""}",ValidationError,ECP,Incomparable bound types,38,no
+AHMED-RNG-09,Ahmed,between,3,"{""min_val"": 5, ""max_val"": 1}",ValidationError,ECP,Reversed interval bounds,39,no
+AHMED-RNG-10,Ahmed,between,"""5""","{""min_val"": 1, ""max_val"": 10}",ValidationError,ECP,Numeric-looking string with numeric bounds,40,no
+SAIM-MAC-01,Saim,mac,"""00:1a:2b:3c:4d:5e""",{},True,ECP,Lowercase colon-separated hexadecimal,41,yes
+SAIM-MAC-02,Saim,mac,"""GG:1A:2B:3C:4D:5E""",{},ValidationError,ECP,Non-hexadecimal octet,42,yes
+SAIM-MAC-03,Saim,mac,"""00:1A:2B:3C:4D:5E""",{},True,ECP,Uppercase colon-separated hexadecimal,43,no
+SAIM-MAC-04,Saim,mac,"""00-1A-2B-3C-4D-5E""",{},True,ECP,Hyphen-separated hexadecimal,44,no
+SAIM-MAC-05,Saim,mac,"""00:00:00:00:00:00""",{},True,ECP,All-zero address is syntactically accepted,45,no
+SAIM-MAC-06,Saim,mac,"""00:1A:2B:3C:4D:5""",{},ValidationError,BVA,16 characters: one below the standard length,46,no
+SAIM-MAC-07,Saim,mac,"""00:1A:2B:3C:4D:5EE""",{},ValidationError,BVA,18 characters: one above the standard length,47,no
+SAIM-MAC-08,Saim,mac,"""00:1A:2B:3C:4D""",{},ValidationError,ECP,Missing sixth octet,48,no
+SAIM-MAC-09,Saim,mac,"""001A2B3C4D5E""",{},ValidationError,ECP,Missing octet separators,49,no
+SAIM-MAC-10,Saim,mac,"""""",{},ValidationError,ECP,Empty input partition,50,no
+AHMED-MAC-01,Ahmed,mac,"""aB:cD:eF:01:23:45""",{},True,ECP,Mixed-case hexadecimal,51,yes
+AHMED-MAC-02,Ahmed,mac,"""AB:CD:EF:01:23:4Z""",{},ValidationError,ECP,Non-hexadecimal final character,52,yes
+AHMED-MAC-03,Ahmed,mac,"""FF:FF:FF:FF:FF:FF""",{},True,ECP,Broadcast address is syntactically accepted,53,no
+AHMED-MAC-04,Ahmed,mac,"""AB:CD:EF:01:23""",{},ValidationError,BVA,Five octets: one below the required six,54,no
+AHMED-MAC-05,Ahmed,mac,"""AB:CD:EF:01:23:45:67""",{},ValidationError,BVA,Seven octets: one above the required six,55,no
+AHMED-MAC-06,Ahmed,mac,"""ABCD.EF01.2345""",{},ValidationError,ECP,Unsupported dotted representation,56,no
+AHMED-MAC-07,Ahmed,mac,""" AB:CD:EF:01:23:45""",{},ValidationError,ECP,Leading whitespace is not stripped,57,no
+AHMED-MAC-08,Ahmed,mac,12345,{},ValidationError,ECP,Integer supplied instead of a string,58,no
+AHMED-MAC-09,Ahmed,mac,null,{},ValidationError,ECP,Missing address partition,59,no
+AHMED-MAC-10,Ahmed,mac,"""AB-CD:EF-01:23-45""",{},True,ECP,Mixed separators accepted by pinned source regex,60,no
